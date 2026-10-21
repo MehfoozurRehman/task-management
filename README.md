@@ -1,50 +1,33 @@
-# Welcome to your Expo app 👋
+# task-management
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An Expo app that is still the stock template, with no task features yet.
 
-## Get started
+**Status:** Stub. The app has only two source files, and the only screen is the default `create-expo-app` placeholder ("Edit app/index.tsx to edit this screen.").
 
-1. Install dependencies
+## The problem
 
-   ```bash
-   npm install
-   ```
+The repo name suggests a task manager, but the code does not yet show one. The project was created from the Expo starter and has not been changed.
 
-2. Start the app
+## What it does
 
-   ```bash
-    npx expo start
-   ```
+Nothing yet. The root screen in `app/index.tsx` renders a centred placeholder text.
 
-In the output, you'll find options to open the app in a
+## How it's built
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Expo with file-based routing through `expo-router`: screens live under `app/`, and the directory layout defines the routes.
+- React Native, TypeScript, and `react-native-reanimated` and `react-native-gesture-handler` are listed as dependencies.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Running it locally
 
 ```bash
-npm run reset-project
+npm install
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+`npm start` runs `expo start`. The package also defines `android`, `ios`, `web` and `lint` scripts.
 
-## Learn more
+## What's left
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- No task features: no data model, storage, or task screens.
+- The screen is the Expo placeholder.
+- No tests. `react-test-renderer` is a dev dependency, but there are no test files.
